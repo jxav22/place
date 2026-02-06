@@ -47,22 +47,11 @@ const getContractData = async (address: Address) => {
 
   let contractPath = "";
 
-  const buildInfoDirectory = path.join(
-    __dirname,
-    "..",
-    "..",
-    "..",
-    "..",
-    "..",
-    "..",
-    "..",
-    "foundry",
-    "out",
-    "build-info",
-  );
+  // Resolve from cwd (packages/nextjs when running yarn start) to sibling foundry package
+  const buildInfoDirectory = path.join(process.cwd(), "..", "foundry", "out", "build-info");
 
   if (!fs.existsSync(buildInfoDirectory)) {
-    throw new Error(`Directory ${buildInfoDirectory} not found.`);
+    return null;
   }
 
   const deployedContractsOnChain = contracts[chainId];

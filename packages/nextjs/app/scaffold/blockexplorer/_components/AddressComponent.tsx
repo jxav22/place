@@ -30,7 +30,7 @@ export const AddressComponent = ({
                   format="long"
                   onlyEnsOrAddress
                   blockExplorerAddressLink={
-                    targetNetwork.id === hardhat.id ? `/blockexplorer/address/${address}` : undefined
+                    targetNetwork.id === hardhat.id ? `/scaffold/blockexplorer/address/${address}` : undefined
                   }
                 />
                 <div className="flex gap-1 items-center">

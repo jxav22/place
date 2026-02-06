@@ -31,7 +31,7 @@ export const AddressQRCodeModal = ({ address, modalId }: AddressQRCodeModalProps
                   disableAddressLink
                   onlyEnsOrAddress
                   blockExplorerAddressLink={
-                    targetNetwork.id === hardhat.id ? `/blockexplorer/address/${address}` : undefined
+                    targetNetwork.id === hardhat.id ? `/scaffold/blockexplorer/address/${address}` : undefined
                   }
                 />
               </div>

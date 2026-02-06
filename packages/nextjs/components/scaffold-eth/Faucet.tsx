@@ -103,7 +103,7 @@ export const Faucet = () => {
                   address={faucetAddress}
                   onlyEnsOrAddress
                   blockExplorerAddressLink={
-                    targetNetwork.id === hardhat.id ? `/blockexplorer/address/${faucetAddress}` : undefined
+                    targetNetwork.id === hardhat.id ? `/scaffold/blockexplorer/address/${faucetAddress}` : undefined
                   }
                 />
               </div>

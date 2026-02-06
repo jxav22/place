@@ -69,7 +69,9 @@ const TransactionComp = ({ txHash }: { txHash: Hash }) => {
                     format="long"
                     onlyEnsOrAddress
                     blockExplorerAddressLink={
-                      targetNetwork.id === hardhat.id ? `/blockexplorer/address/${transaction.from}` : undefined
+                      targetNetwork.id === hardhat.id
+                        ? `/scaffold/blockexplorer/address/${transaction.from}`
+                        : undefined
                     }
                   />
                 </td>
@@ -86,7 +88,9 @@ const TransactionComp = ({ txHash }: { txHash: Hash }) => {
                         format="long"
                         onlyEnsOrAddress
                         blockExplorerAddressLink={
-                          targetNetwork.id === hardhat.id ? `/blockexplorer/address/${transaction.to}` : undefined
+                          targetNetwork.id === hardhat.id
+                            ? `/scaffold/blockexplorer/address/${transaction.to}`
+                            : undefined
                         }
                       />
                     )
@@ -99,7 +103,7 @@ const TransactionComp = ({ txHash }: { txHash: Hash }) => {
                         onlyEnsOrAddress
                         blockExplorerAddressLink={
                           targetNetwork.id === hardhat.id
-                            ? `/blockexplorer/address/${receipt.contractAddress}`
+                            ? `/scaffold/blockexplorer/address/${receipt.contractAddress}`
                             : undefined
                         }
                       />
